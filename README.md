@@ -1,4 +1,4 @@
-# Facebook MarketPlace Bot
+# Facebook Marketplace Search Script
 
 A simple Python program for the Facebook Marketplace to allow for multiple location to be searched at a time.
 
