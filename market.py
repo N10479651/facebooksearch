@@ -1,7 +1,11 @@
+import json
 import webbrowser
+from configparser import ConfigParser
 
-# Define cities
-cities = ["brisbane", "sydney", "melbourne", "adelaide", "perth"]
+# Define locations
+config = ConfigParser()
+config.read('locations.cfg')
+cities = json.loads(config.get("Config", "locations"))
 
 
 # Search function
@@ -15,7 +19,7 @@ def search():
         webbrowser.open("https://www.facebook.com/marketplace/" + cities[i] + "/search?query=" + newquery)
 
 
-# Main loop
+# Main
 if __name__ == "__main__":
     while True:
         search()
